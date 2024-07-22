@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Spotify Clone</title>
+   <link rel="icon" href="assests/favicon/favicon.ico ">
+   <link rel="stylesheet" href="utility.css">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <div class="containeer">
+
+      <div class="left-containeer bg-black  round-radius">
+
+         <div class="home border bg-grey">
+            <div class="logo invert"><img src="assests/svgs/logo.svg" alt="logo"></div>
+            <ul>
+               <li><img class="invert" src="assests/svgs/home.svg" alt="">
+                  <h5>Home</h5>
+               </li>
+               <li><img class="invert" src="assests/svgs/search.svg" alt="">
+                  <h5>Search</h5>
+               </li>
+            </ul>
+         </div>
+
+         <div class="library border bg-grey">
+            <div class="heading">
+               <div class="heading-box1">
+                  <img src="assests/svgs/playlist.svg" alt="" class="playlist invert">
+                  <h2>Your Library</h2>
+               </div>
+               <div class="heading-box2">
+                  <i class="fa-solid fa-plus"></i>
+               </div>
+
+            </div>
+
+
+            <div class="songlist">
+               <div class="songlist-box1  round-radius">
+                  <h4>Create your First Playlist</h4>
+                  <p>It's Easy we'll help you</p>
+
+                  <button>
+                     Create Playlist
+                  </button>
+               </div>
+               <div class="songlist-box2  round-radius">
+                  <h4>Let's Find Some Podcast's to Follow</h4>
+                  <p>We will Keep you Updated on new Episodes</p>
+
+                  <button>
+                     Browse Podcast's
+                  </button>
+               </div>
+            </div>
+         </div>
+
+         <div class="left-containeer-footer bg-grey">
+            <div class="footer-div1">
+               <a href="">Legal</a>
+               <a href="">Safety and Privacy Center</a>
+            </div>
+            <div class="footer-div2">
+               <a href="">Privacy Polices</a>
+               <a href="">Cookies</a>
+               <a href="">About Ads</a>
+            </div>
+            <div class="footer-div3">
+               <a href="">Accessibility</a><br>
+               <a href="">Cookies</a>
+            </div>
+
+
+            <button><i class="fa-solid fa-globe"></i> English</button>
+         </div>
+
+      </div>
+
+      <div class="right-containeer bg-grey round-radius">
+         <header>
+            <div class="header-box1">
+               <i class="fa-solid fa-chevron-left"></i>
+               <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="header-box2">
+               <p>Sign-Up</p>
+               <button>Log in</button>
+            </div>
+         </header>
+
+         <div class="musicbar">
+
+            <p id="currentsong">Play Songs</p>
+            <audio id="audioplayer" controls></audio>
+            <div class="playbar">
+               <i id="backwardbtn" class="fa-solid fa-backward fa-1x"></i>
+               <i id="backward10sbtn" class="fa-solid fa-rotate-left"></i>
+               <b id="playbtn">▶</b>
+               <i id="forward10sbtn" class="fa-solid fa-rotate-right"></i>
+               <i id="forwardbtn" class="fa-solid fa-forward fa-1x"></i>
+            </div>
+            <input type="range" id="volumeslider" min="0" max="1" step="0.01" value="1">
+
+            <!-- <table id="songList">
+               <tr>
+                  <th>Song Name</th>
+               </tr>
+            </table> -->
+
+         </div>
+
+         <div class="content-box">
+
+            <div class="artist-content">
+               <div class="artist-content-header">
+                  <h4>Popular Artists</h4>
+                  <p>Show All</p>
+               </div>
+
+               <div class="artist-main-box">
+                  <section>
+                     <img src="assests/artist-images/pritam_lead.webp" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Pritam</h4>
+                     <p>Artist</p>
+                  </section>
+                  <section>
+                     <img src="assests/artist-images/arijit-singh.jpg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Arijit-Singh</h4>
+                     <p>Artist</p>
+                  </section>
+                  <section>
+                     <img src="assests/artist-images/a-r-rahman.jpg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>A.R.Rahaman</h4>
+                     <p>Artist</p>
+                  </section>
+                  <section>
+                     <img src="assests/artist-images/vishal_mishra.webp" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Vishal</h4>
+                     <p>Artist</p>
+                  </section>
+                  <section>
+                     <img src="assests/artist-images/Anirudh_Ravichander.webp" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Anirudh_Ravichander</h4>
+                     <p>Artist</p>
+                  </section>
+
+               </div>
+            </div>
+
+            <div class="album-content">
+               <div class="album-content-header">
+                  <h4>Popular Albums</h4>
+                  <p>Show All</p>
+               </div>
+
+               <div class="album-main-box">
+                  <section>
+                     <img src="assests/album-images/animal.jpeg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Animal</h4>
+                     <p><a href="">Manan Bhardwaj,Vishal Mishra,Janni</a></p>
+                  </section>
+                  <section>
+                     <img src="assests/album-images/ek-tha-raja.jpeg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Ek Tha Raja</h4>
+                     <p><a href="">Badshah</a></p>
+                  </section>
+                  <section>
+                     <img src="assests/album-images/still-rollin.jpeg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Still-Rollin</h4>
+                     <p><a href="">Shubh</a></p>
+                  </section>
+                  <section>
+                     <img src="assests/album-images/ashiqui.jpeg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Aashiqui 2</h4>
+                     <p><a href="">Mithoon,Ankit Tiwari,Jeet Gannugli</a></p>
+                  </section>
+                  <section>
+                     <img src="assests/album-images/moosetape.jpeg" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Moosetape</h4>
+                     <p><a href="">Sidhu Moose Wala</a></p>
+                  </section>
+               </div>
+            </div>
+
+            <div class="radio-content">
+               <div class="radio-content-header">
+                  <h4>Popular radio</h4>
+                  <p>Show All</p>
+               </div>
+
+               <div class="radio-main-box">
+                  <section>
+                     <img src="assests/radio-images/arijit-radio.png" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Arijit Singh Radio</h4>
+                     <p><a href=""></a></p>
+                  </section>
+                  <section>
+                     <img src="assests/radio-images/Diljit-radio.png" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Diljit Dosanjh Radio</h4>
+                     <p><a href=""></a></p>
+                  </section>
+                  <section>
+                     <img src="assests/radio-images/alka-radio.png" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Alka Yagnik Radio</h4>
+                     <p><a href=""></a></p>
+                  </section>
+                  <section>
+                     <img src="assests/radio-images/kumar-radio.png" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>Kumar Sanu Radio</h4>
+                     <p><a href=""></a></p>
+                  </section>
+                  <section>
+                     <img src="assests/radio-images/kk-radio.png" alt="">
+                     <button class="play"><img src="assests/svgs/play.svg" alt=""></button>
+                     <h4>KK Radio</h4>
+                     <p><a href=""></a></p>
+                  </section>
+
+               </div>
+            </div>
+
+
+         </div>
+
+         <div class="right-containeer-footer">
+            <div class="right-containeer-footer-box1">
+               <div>
+                  <h4>Company</h4>
+                  <a href="">About</a>
+                  <a href="">Jobs</a>
+                  <a href="">For the Record</a>
+               </div>
+
+               <div>
+                  <h4>Communities</h4>
+                  <a href="">For Artists</a>
+                  <a href="">Developers</a>
+                  <a href="">Advertising</a>
+                  <a href="">Investors</a>
+                  <a href="">Vendors</a>
+               </div>
+
+               <div>
+                  <h4>Useful Links</h4>
+                  <a href="">Support</a>
+                  <a href="">Free Mobile App</a>
+               </div>
+
+               <div>
+                  <h4>Spotify Plans</h4>
+                  <a href="">Premium Indiviual</a>
+                  <a href="">Premium Duo</a>
+                  <a href="">Premium Family</a>
+                  <a href="">Premium Student</a>
+                  <a href="">Spotify Free</a>
+               </div>
+
+            </div>
+
+            <div class="right-containeer-footer-box2">
+               <i class="fa-brands fa-instagram"></i>
+               <i class="fa-brands fa-twitter"></i>
+               <i class="fa-brands fa-facebook"></i>
+            </div>
+
+         </div>
+
+         <div class="extra-footer">
+            <hr>
+            <p>&copy; 2024 Spotify AB</p>
+         </div>
+
+      </div>
+
+      <div class="signup-footer">
+         <div class="signup-footer1">
+            <p>Preview For Spotify</p>
+            <p>Sign up to get unlimited songs and podcasts with occassional ads. No credit card needed</p>
+         </div>
+         <div class="signup-footer2">
+            <button>Sign Up Free</button>
+         </div>
+
+      </div>
+
+   </div>
+   <script src="./script.js"></script>
+</body>
+
+</html>
